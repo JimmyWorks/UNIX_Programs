@@ -1,0 +1,13 @@
+   C++ Controller Code
+   Author: Jimmy Nguyen
+   Email:  jimmy@jimmyworks.net
+  
+   Program Description:
+   Demonstrate the use of C++ program to call an external process
+   and process the console output.  This program calls an installed
+   older version of gawk to process code in "gawk.code" file using 
+   input from "numbers.txt".  The result is printed to the screen
+   and to a file.  
+   
+   This also demonstrates a simple use of Makefiles.  Here a simple
+   Makefile can be used to quickly build, clean, and tar the project.
