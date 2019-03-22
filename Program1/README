@@ -1,4 +1,15 @@
-CONTENTS OF PROGRAM 1
+Program 1 
+Author: Jimmy Nguyen
+Email: jimmy@jimmyworks.net
+
+Description:
+Simple program demonstrating multi-file C programming in Unix environment.
+Shell script utilized to compile the program in multiple steps to demonstate
+knowledge of pre-processing, compilation, and linking.  Running compile.sh
+will compile the script and generate object files and executable.  Output
+to standard output and standard error are redirected to respective files.
+
+Contents:
 
 FILENAME		DESCRIPTION
 ========================================================================
