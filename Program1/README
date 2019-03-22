@@ -1,0 +1,20 @@
+CONTENTS OF PROGRAM 1
+
+FILENAME		DESCRIPTION
+========================================================================
+compile.sh		Shell script for compiling program1
+p1_error.log		Output log for program1 stderr
+p1_output.log		Output log for program1 stdout
+program1		Generated program1 executable using compile.sh
+program1.h		C++ header file for program1
+program1_main.cpp	C++ source file containing main()
+program1_main.o		C++ object file containing main()
+program1_part1.log	Output log for screen -L (part 1)
+program1_part2.log	Output log for screen -L (part 2)
+program1_part3.log	Output log for screen -L (part 3)
+program1_part4.log	Output log for screen -L (part 4)
+program1_part5.log	Output log for screen -L (part 5)
+program1_sub.cpp	C++ source file containing support functions
+program1_sub.o		C++ object file containing support functions
+README			This readme text file
+run.sh			Shell script for running test cases of program1

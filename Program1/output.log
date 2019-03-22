@@ -1,0 +1,24 @@
+Standard Output Log
+Author: Jimmy H. Nguyen
+Email: Jimmy@JimmyWorks.net
+MAIN: Program: ./program
+MAIN: Arguments Passed (argc): 1
+MAIN: Argument 1: ./program
+MAIN: Sub-program executed properly.
+MAIN: Done!
+MAIN: Program: ./program
+MAIN: Arguments Passed (argc): 2
+MAIN: Argument 1: ./program
+MAIN: Argument 2: hello
+MAIN: Sub-program executed properly.
+MAIN: Done!
+MAIN: Program: ./program
+MAIN: Arguments Passed (argc): 6
+MAIN: Argument 1: ./program
+MAIN: Argument 2: My
+MAIN: Argument 3: name
+MAIN: Argument 4: is
+MAIN: Argument 5: Inigo
+MAIN: Argument 6: Montoya.
+MAIN: Sub-program executed properly.
+MAIN: Done!
