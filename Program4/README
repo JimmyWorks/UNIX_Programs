@@ -1,0 +1,46 @@
+ Program 4: Bison/Flex Project
+  Author: Jimmy Nguyen
+  Email: Jimmy@JimmyWorks.net
+
+	   Create an executable called via symlinks: scanner and parser to
+	   execute scanning tokens or parsing an input postal addresses stream
+	   to an XML output format.
+
+Contents:
+
+input/			input directory
+  input.txt		  input source with postal addresses
+
+output/			output directory
+  parser_stderr.txt	  output from parser stderr containing XML output  
+  parser_stdout.txt  	  output from parser stdout containing run messages
+  scanner_output.txt 	  output from scanner stdout identifying input stream tokens
+
+src/			source code directory
+  tokens.l		  Lex file
+  grammar.y		  Yacc file
+  program4.c	  Main file
+  Makefile		  Makefile
+  program4		  Program executable
+  parser		  symlink to program4
+  scanner		  symlink to program4
+
+  Other intermediate files in src:
+  grammar.tab.c  tokens.c  grammar.tab.h
+  
+
+Makefile Commands:
+  make                Make all executables.
+  make clean          Clean all intermediate files, executables, and output files.
+  make test           Make all and run unit test outputting everything to stdout.
+  make delivery       Make all and run all.  Exports results to respective output files.
+  make backup         Make a backup of the current project
+
+Try this:
+
+  To clean everything and regenerate output files:
+  > make clean
+  > make delivery
+
+  To see the unit tests all output to stdout:
+  > make test

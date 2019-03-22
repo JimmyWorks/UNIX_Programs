@@ -1,0 +1,139 @@
+./scanner
+
+Operating in scan mode
+
+yylex returned NAME_INITIAL token (F.)
+yylex returned SPACE token 
+yylex returned NAME token (Flinstone)
+yylex returned EOL token 
+yylex returned INT token (5806)
+yylex returned SPACE token 
+yylex returned NAME token (PebbleRd)
+yylex returned SPACE token 
+yylex returned HASH token (#)
+yylex returned INT token (345)
+yylex returned EOL token 
+yylex returned NAME token (Stonecity)
+yylex returned COMMA token (,)
+yylex returned SPACE token 
+yylex returned NAME token (TX)
+yylex returned SPACE token 
+yylex returned INT token (75080)
+yylex returned EOL token 
+yylex returned NAME_INITIAL token (W)
+yylex returned SPACE token 
+yylex returned NAME token (Flinstone)
+yylex returned SPACE token 
+yylex returned ROMAN_NUM token (IV)
+yylex returned EOL token 
+yylex returned INT token (5806)
+yylex returned SPACE token 
+yylex returned NAME token (PebbleRd)
+yylex returned SPACE token 
+yylex returned INT token (345)
+yylex returned EOL token 
+yylex returned NAME token (Stonecity)
+yylex returned COMMA token (,)
+yylex returned SPACE token 
+yylex returned NAME token (TX)
+yylex returned SPACE token 
+yylex returned INT token (75080)
+yylex returned DASH token (-)
+yylex returned INT token (4321)
+yylex returned EOL token 
+yylex returned NAME token (Barney)
+yylex returned SPACE token 
+yylex returned NAME token (Rubble)
+yylex returned SPACE token 
+yylex returned JR token (Jr.)
+yylex returned EOL token 
+yylex returned IDENTIFIER token (106B)
+yylex returned SPACE token 
+yylex returned NAME token (RockyRoad)
+yylex returned EOL token 
+yylex returned NAME token (Stonecity)
+yylex returned COMMA token (,)
+yylex returned SPACE token 
+yylex returned NAME token (TX)
+yylex returned SPACE token 
+yylex returned INT token (75080)
+yylex returned DASH token (-)
+yylex returned INT token (9384)
+yylex returned EOL token 
+yylex returned NAME token (Betty)
+yylex returned SPACE token 
+yylex returned NAME token (Rubble)
+yylex returned EOL token 
+yylex returned IDENTIFIER token (106B)
+yylex returned SPACE token 
+yylex returned NAME token (RockyRoad)
+yylex returned EOL token 
+yylex returned NAME token (Stonecity)
+yylex returned COMMA token (,)
+yylex returned SPACE token 
+yylex returned NAME token (TX)
+yylex returned SPACE token 
+yylex returned INT token (75080)
+yylex returned EOL token 
+yylex returned INT token (1234)
+yylex returned SPACE token 
+yylex returned NAME token (Bad)
+yylex returned SPACE token 
+yylex returned NAME token (Name)
+yylex returned SPACE token 
+yylex returned NAME token (Line)
+yylex returned EOL token 
+yylex returned INT token (9000)
+yylex returned SPACE token 
+yylex returned NAME token (SomeStreet)
+yylex returned EOL token 
+yylex returned NAME token (Dallas)
+yylex returned COMMA token (,)
+yylex returned SPACE token 
+yylex returned NAME token (TX)
+yylex returned SPACE token 
+yylex returned INT token (75080)
+yylex returned DASH token (-)
+yylex returned INT token (4872)
+yylex returned EOL token 
+yylex returned NAME_INITIAL token (B.)
+yylex returned SPACE token 
+yylex returned NAME token (Wayne)
+yylex returned SPACE token 
+yylex returned ROMAN_NUM token (III)
+yylex returned EOL token 
+yylex returned NAME token (BadBatStreetNumber)
+yylex returned SPACE token 
+yylex returned HASH token (#)
+yylex returned INT token (456)
+yylex returned EOL token 
+yylex returned NAME token (Gotham)
+yylex returned COMMA token (,)
+yylex returned SPACE token 
+yylex returned NAME token (TX)
+yylex returned SPACE token 
+yylex returned INT token (88234)
+yylex returned DASH token (-)
+yylex returned INT token (3664)
+yylex returned EOL token 
+yylex returned NAME_INITIAL token (B.)
+yylex returned SPACE token 
+yylex returned NAME token (Wayne)
+yylex returned SPACE token 
+yylex returned ROMAN_NUM token (III)
+yylex returned EOL token 
+yylex returned INT token (1000)
+yylex returned SPACE token 
+yylex returned NAME token (GothamManor)
+yylex returned EOL token 
+yylex returned NAME token (Gotham)
+yylex returned COMMA token (,)
+yylex returned SPACE token 
+yylex returned NAME token (TX)
+yylex returned SPACE token 
+yylex returned NAME token (ABCD)
+yylex returned EOL token 
+yylex has reached END OF FILE
+
+
+Scan Successful!

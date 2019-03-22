@@ -1,0 +1,10 @@
+./parser
+
+Operating in parse mode
+
+Bad name part... Skipping to newline
+Bad street address part... Skipping to newline
+Bad location part... Skipping to newline
+
+
+Parse Successful!
