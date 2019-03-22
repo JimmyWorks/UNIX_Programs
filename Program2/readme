@@ -1,0 +1,59 @@
+Developing Program CLI
+Author: Jimmy Nguyen
+Email: jimmy@jimmyworks.net
+
+Description:
+Using tclap libraries, develop a command-line interface (CLI)
+to manage different calls to a program.  The behavior of the
+program input should be as follows with the following options:
+
+./program  [-o <output filename>] [-l] [-u] [--] [--version] [-h]
+           <input filename>
+
+    -u --upper		  Uppercase all letters in document
+    -l --lower		  Lowercase all letters in document
+    -o <output file>  Specify ouput file (default: output.txt)
+    -- -ignore_rest	  Ignore rest of cmd
+    -h --help		  Display usage
+    --version		  Display version
+    <input file>	  Input file is required and cannot be ignored
+         			  by ignore_rest
+
+    This project abstracts the command-line parsing aspect of the
+    program, storing it in a std::map object.  Using maps and enums,
+    any argument name can be used with the OPTIONS_MAP to access the
+    value as a string, checking if the value is set and what the 
+    property is set to.  The --upper and --lower arguments are
+    mutually exclusive but neither is required to run the program.
+ 
+    Example:
+        >> OPTIONS_MAP[OUTFILE]
+        true
+    	>> OPTIONS_MAP[OUTFILE_NAME] 
+        output.txt
+
+
+Contents:
+	Document		Description
+	===========================================================
+	compile.sh  		Compile bash script
+	output.txt  		Sample lowercase output (unit test)
+	program.cc  		main source file
+	programParser.cc  	parser source file
+	sample_input.txt  	Sample text input file
+	upper_output.txt     	Sample uppercase output (unit test)
+	program 		executable   
+	unit_test.sh		Unit testing bash script
+
+	include/
+		program.h		Program header file
+		tclap			Supporting tclap headers
+
+How to Run:
+1.	Run compile.sh to compile executable: program
+2.	Run unit_test.sh to run all test cases
+3.	Hit enter after each test case when prompted to continue
+4.	All error cases should be tested. Two exported files should
+	be generated:
+		output.txt
+		upper_output.txt
