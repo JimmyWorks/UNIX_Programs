@@ -1,0 +1,15 @@
+Program 6 - Binary File I/O Visualization
+Author: Jimmy Nguyen
+Email: jimmy@jimmyworks.net
+
+Description:
+Using the Curse Development Kit for visualization, a supplied
+binary file with a defined structure is read to obtain data
+to be outputted to the CDK matrix.The header file that
+comes with this project contains the classes needed to
+extract data from the binary file.
+
+Make Commands:
+     make		Make all executables.
+     make clean		Clean all intermediate files
+     make backup 	Make a backup of the current project
