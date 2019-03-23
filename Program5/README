@@ -1,0 +1,126 @@
+Program 5 - File Auto-Backup Daemon
+Author: Jimmy Nguyen
+Email: jimmy@jimmyworks.net
+
+Description:
+
+   This program watches a directory and monitors for any file
+   changes.  Upon a file modification, the old file is backed up
+   to a hidden, .versions, directory within the watched directory.
+   Files are backed up with the filename and the current timestamp
+   appended.
+  
+   The program can be run in the terminal or in daemon-mode in the
+   background.  The program has CLI-support which allows for the
+   program to determine with configuration file to use and whether 
+   or not to run in daemon-mode.
+  
+   The configuration file specifies which directory to monitor,
+   the log filename, the max number of version files, and other
+   settings.
+  
+   The program also accepts the following signals: SIGINT, SIGTERM,
+   and SIGHUP.  SIGINT and SIGTERM will terminate the program with
+   all files properly closed and the pid file, which is created when
+   running in deamon-mode, to be deleted.  SIGHUP will reload the
+   configuration file except for password and monitored directory.
+   Note that SIGHUP can potentially change which log file the output
+   will be written to mid-execution.
+
+======================================================================
+PROGRAM CONTENTS:
+
+DIRECTORY/FILE				DESCRIPTION
+======================================================================
+cs3376dirmond.conf			Default configuration file
+					Must change the watch directory
+					to a folder with write access to
+					test the program.
+
+bin/					Bin directory for executables
+
+    program5				Statically-linked program5
+    					executable
+
+include/				Include directory
+    program5/				Program 5 sub-folder
+
+       ArgInterface.h 			Header for ArgInterface class
+
+       CustomSwitchArg.h 		Header for CustomSwitchArg class
+
+       CustomUnlabeledValueArg.h 	Header for CustomUnlabeledValueArg
+       					class
+
+       program5.h			Main program header with all required
+       					extern function signatures and maps
+					declared
+
+src/					Source file directory
+
+    CustomSwitchArg.cc			Derived CustomSwitchArg class 
+    					implementation
+
+    Makefile				Project Makefile
+
+    program5cli.cc			Program CLI parsing implementation
+
+    program5monitor.cc			Program directory monitoring 
+    					implementation
+    
+    CustomUnlabeledValueArg.cc		Derived CustomUnlabeledValueArg 
+    					implementation
+    
+    program5.cc				Program main
+    
+    program5globals.cc			Program globals
+    
+    program5rude.cc			Program configuration parsing
+    					implementation
+
+test/					Default testing directory
+
+======================================================================
+PROGRAM MAKEFILE INSTRUCTIONS:
+
+======================================================================
+
+1. Setup library and header file paths
+   Open the Makefile and locate the following variables:
+   	- LIB_DIR (location of libraries including rudeconfig)
+	- OSS_HD_DIR (location of header files for rudeconfig and tclap)
+   These must be reassigned to the respective location on your machine
+
+2. Setup configuration file
+   Depending on the configuration file to be used, make sure it points
+   to a directory that can be written.  The cs3376dirmond.conf located
+   on the root program directory will be used by default.  The WatchDir
+   parameter in the config file must be an absolute full path to the 
+   watched directory.
+
+   NOTE: Program only supports a custom config file to be located in
+   the root program directory but multiple config files with custom
+   names can be provided.
+
+3. If using statically-linked executable provided, simply call the
+   executable or provide options:
+   ./program5 [-d] [<config filename located in root directory>]
+       -d	run in daemon mode
+
+4. Makefile make commands
+   Additionally, the Makefile in the src directory can be used.
+   Here are some commands:
+
+   make			make a statically-linked program anew in 
+   			bin directory
+   make clean		clean src directory of intermediate files
+   make test		test program5 executable in bin directory
+   make test_daemon	test program5 executable in daemon mode
+   make clean_files	clean log files and pid files from forced
+   			SIGKILL of process
+
+5. While an instance of the program is running in a separate window
+   or a process daemon is active, go to the test directory and 
+   create, modify, or delete files.  All changes should show in the
+   log file.  File changes should be automatically save to the 
+   hidden .versions directory in the test directory. 
