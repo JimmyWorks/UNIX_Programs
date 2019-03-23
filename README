@@ -1,0 +1,92 @@
+Programming_In_UNIX
+C/C++ programming projects and exercises in UNIX environment.
+
+== Program 1: Simple Multi-File ==
+
+Simple program demonstrating multi-file C programming in Unix environment.
+Shell script utilized to compile the program in multiple steps to demonstate
+knowledge of pre-processing, compilation, and linking.  Running compile.sh
+will compile the script and generate object files and executable.  Output
+to standard output and standard error are redirected to respective files.
+
+== Program 2: CLI ==
+
+Using tclap libraries, develop a command-line interface (CLI)
+to manage different calls to a program.  The behavior of the
+program input should be as follows with the following options:
+
+./program  [-o <output filename>] [-l] [-u] [--] [--version] [-h]
+           <input filename>
+
+    -u --upper		  Uppercase all letters in document
+    -l --lower		  Lowercase all letters in document
+    -o <output file>  Specify ouput file (default: output.txt)
+    -- -ignore_rest	  Ignore rest of cmd
+    -h --help		  Display usage
+    --version		  Display version
+    <input file>	  Input file is required and cannot be ignored
+         			  by ignore_rest
+
+    This project abstracts the command-line parsing aspect of the
+    program, storing it in a std::map object.  Using maps and enums,
+    any argument name can be used with the OPTIONS_MAP to access the
+    value as a string, checking if the value is set and what the 
+    property is set to.  The --upper and --lower arguments are
+    mutually exclusive but neither is required to run the program.
+ 
+    Example:
+        >> OPTIONS_MAP[OUTFILE]
+        true
+    	>> OPTIONS_MAP[OUTFILE_NAME] 
+        output.txt
+
+== Program 3: GAWK ==
+
+Demonstrate the use of C++ program to call an external process
+and process the console output.  This program calls an installed
+older version of gawk to process code in "gawk.code" file using 
+input from "numbers.txt".  The result is printed to the screen
+and to a file.  
+   
+This also demonstrates a simple use of Makefiles.  Here a simple
+Makefile can be used to quickly build, clean, and tar the project.
+
+== Program 4: Bison/Flex Project ==
+
+Create an executable called via symlinks: scanner and parser to
+execute scanning tokens or parsing an input postal addresses stream
+to an XML output format.
+
+== Program 5 - File Auto-Backup Daemon ==
+
+This program watches a directory and monitors for any file
+changes.  Upon a file modification, the old file is backed up
+to a hidden, .versions, directory within the watched directory.
+Files are backed up with the filename and the current timestamp
+appended.
+  
+The program can be run in the terminal or in daemon-mode in the
+background.  The program has CLI-support which allows for the
+program to determine with configuration file to use and whether 
+or not to run in daemon-mode.
+  
+The configuration file specifies which directory to monitor,
+the log filename, the max number of version files, and other
+settings.
+  
+The program also accepts the following signals: SIGINT, SIGTERM,
+and SIGHUP.  SIGINT and SIGTERM will terminate the program with
+all files properly closed and the pid file, which is created when
+running in deamon-mode, to be deleted.  SIGHUP will reload the
+configuration file except for password and monitored directory.
+Note that SIGHUP can potentially change which log file the output
+will be written to mid-execution.
+
+== Program 6 - Binary File I/O Visualization ==
+
+rse Development Kit for visualization, a supplied
+binary file with a defined structure is read to obtain data
+to be outputted to the CDK matrix.The header file that
+comes with this project contains the classes needed to
+extract data from the binary file.
+
